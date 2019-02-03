@@ -1,26 +1,28 @@
 {
-  "name": "heorku-nodejs",
+  "name": "module2-hw",
   "version": "1.0.0",
-  "description": "",
+  "description": "HW for module 2 using Express handlebars & RESTapi",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "nodemon server",
+    "server": "node server",
+    "client": "node client",
     "start": "npm install && node server"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/knitesh/heorku-nodejs.git"
-  },
-  "author": "knitesh",
+  "keywords": [
+    "expressjs",
+    "handlerbars",
+    "node"
+  ],
+  "author": "Knitesh",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/knitesh/heorku-nodejs/issues"
-  },
-  "homepage": "https://github.com/knitesh/heorku-nodejs#readme",
-  "devDependencies": {},
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "underscore": "^1.9.1",
-    "body-parser": "^1.18.3"
+    "express-handlebars": "^3.0.0",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
   }
 }
