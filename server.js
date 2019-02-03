@@ -7,7 +7,7 @@ var app = express();
 var port = process.env.PORT || 8080;
 
 app.get("/", (req, res) => {
-  res.send("Hello from Server");
+  res.status(200).send("Hello from Server");
 });
 app.listen(port, () => {
   console.log("Server started on 8080");
