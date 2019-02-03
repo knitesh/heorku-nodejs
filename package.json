@@ -17,9 +17,10 @@
     "url": "https://github.com/knitesh/heorku-nodejs/issues"
   },
   "homepage": "https://github.com/knitesh/heorku-nodejs#readme",
-  "devDependencies": {
-    "body-parser": "^1.18.3",
+  "devDependencies": {},
+  "dependencies": {
     "express": "^4.16.4",
-    "underscore": "^1.9.1"
+    "underscore": "^1.9.1",
+    "body-parser": "^1.18.3"
   }
 }
