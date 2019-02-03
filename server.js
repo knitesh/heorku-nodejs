@@ -10,6 +10,8 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+const PORT = process.env.PORT || 8080;
+
 // express static will server everything
 // with in public as static resource
 app.use(express.static("public"));
@@ -216,6 +218,6 @@ app.get("/lastName/:name", (req, res) => {
 /**
  * @description Start HTTP server and listen for connectsion on 3000 port
  */
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log("Server started on 3000 port");
 });
