@@ -1,0 +1,26 @@
+<!-- Modal Structure -->
+<div id="delete-modal" class="modal">
+    <div class="modal-content">
+        <h4>Please confirm</h4>
+        <div class="divider"></div>
+        <h5>Are you sure you want to delete <span class="blue-text text-darken-2" id="employeeName"></span>?</h5>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn modal-action modal-close waves-effect btn-flat">No</a>
+        <a href="#" id="btnDeleteConfirmed" class="left btn modal-action waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems, {
+            dismissible: false,
+            onOpenStart: function (modal, trigger) {
+                var fullName = trigger.getAttribute('data-fname') + ' ' + trigger.getAttribute('data-lname');
+                var deleteURl = "/employee/delete/" + trigger.getAttribute('data-id');
+                document.getElementById('btnDeleteConfirmed').href = deleteURl;
+                document.getElementById('employeeName').innerText = fullName;
+
+            }
+        });
+    });

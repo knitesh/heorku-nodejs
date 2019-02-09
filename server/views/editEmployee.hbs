@@ -1,0 +1,29 @@
+<h3>Edit Employee</h3>
+<div class="row">
+    <div class="col s12">
+
+        <p class="red-text">{{message}}</p>
+
+    </div>
+    <form class="col s12" method="POST" action="/employee/edit/{{employee._id}}">
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="firstName" name="firstName" type="text" class="validate" required
+                    value="{{employee.firstName}}">
+                <label for="firstName" data-error="Please enter your first name.">First Name</label>
+                <span class="helper-text" data-error="Please enter your first name."></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="firstName" name="lastName" type="text" class="validate" required
+                    value="{{employee.lastName}}">
+                <label for="lastName">Last Name</label>
+                <span class="helper-text" data-error="Please enter your last name."></span>
+            </div>
+        </div>
+        <button type="submit" class="right waves-effect waves-light btn"><i
+                class="material-icons right">send</i>Submit</button>
+        <a href="/employee" class="waves-effect waves-light btn"><i class="material-icons right">cancel</i>Cancel</a>
+    </form>
+</div>

@@ -1,0 +1,33 @@
+{{#if employees.length }}
+<table class="highlight responsive-table">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each employees}}
+        <tr>
+            <td>{{this.firstName}}</td>
+            <td>{{this.lastName}}</td>
+            <td><a href="/employee/edit/{{this._id}}" class="btn  btn-flat"><i class="material-icons">edit</i></td>
+            {{!-- <td><a href="/employee/delete/{{this._id}}"><i class="material-icons">delete</i></td> --}}
+            <td><button data-target="delete-modal" data-id={{this._id}} data-fname={{this.firstName}}
+                    data-lname={{this.lastName}} class=" waves-effect waves-light btn  btn-flat modal-trigger"><i
+                        class="material-icons">delete</i></button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+{{>deleteModal}}
+
+</script>
+{{else}}
+<h3>No Employee found..</h3>
+{{/if}}
